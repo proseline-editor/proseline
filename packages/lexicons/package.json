@@ -1,6 +1,6 @@
 {
   "name": "@proseline-editor/lexicons",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "English, Ukrainian and French word lists for the Proseline style analysis",
   "license": "MIT",
   "author": "Proseline contributors",

@@ -1,6 +1,6 @@
 {
   "name": "@proseline-editor/sync-indexeddb",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "IndexedDB persistence for @proseline-editor/sync: offline open and crash-safe unsent edits",
   "license": "MIT",
   "author": "Proseline contributors",
