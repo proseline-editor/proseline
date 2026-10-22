@@ -10,15 +10,20 @@ let url: string;
 const opened: SyncProvider[] = [];
 
 beforeAll(async () => {
+  // `listen(0)` would fall back to port 80 (Hocuspocus ignores a falsy port), which only root may
+  // open on Linux; port 0 in the configuration asks the OS for a free one.
   server = new Server({
+    port: 0,
+    address: '127.0.0.1',
     quiet: true,
     onAuthenticate: async ({ token, connectionConfig }) => {
       if (token === 'bad') throw new Error('forbidden');
       if (token === 'viewer') connectionConfig.readOnly = true;
     },
   });
-  await server.listen(0);
+  await server.listen();
   url = server.webSocketURL;
+  expect(server.address.port).not.toBe(80);
 });
 afterAll(() => server.destroy());
 afterEach(() => opened.splice(0).forEach((p) => p.destroy()));
