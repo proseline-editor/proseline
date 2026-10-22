@@ -1,6 +1,6 @@
 {
   "name": "@proseline-editor/sync",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Reliable Yjs sync for the Proseline prose editor: provider engine, collaboration feature, server helpers",
   "license": "MIT",
   "author": "Proseline contributors",

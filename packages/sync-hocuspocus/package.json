@@ -1,6 +1,6 @@
 {
   "name": "@proseline-editor/sync-hocuspocus",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Hocuspocus (y-websocket protocol) provider for the Proseline prose editor",
   "license": "MIT",
   "author": "Proseline contributors",
