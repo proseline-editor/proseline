@@ -26,9 +26,12 @@ jobs:
       # A virtual display for the Electron example (harmless for the browser suites).
       - run: xvfb-run -a pnpm e2e
         env:
-          # Shared CI runners are slower than a dev machine; the spec budget is 1000 ms / 16 ms.
-          PL_PERF_READY_MS: '2000'
-          PL_PERF_KEY_MS: '16'
+          # Shared 2-core CI runners are several times slower and noisier than a dev machine, so CI
+          # only guards against order-of-magnitude regressions; the local budgets (1000 ms ready,
+          # 16 ms keystroke, 3000 ms style analysis) stay strict.
+          PL_PERF_READY_MS: '4000'
+          PL_PERF_KEY_MS: '50'
+          PL_PERF_STYLE_MS: '15000'
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
