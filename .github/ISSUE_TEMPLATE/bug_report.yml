@@ -1,0 +1,35 @@
+name: Bug report
+description: Something in Proseline does not work as documented.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Steps, or a link to a repository or sandbox. Small is fast to fix.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Package versions
+      placeholder: "@proseline-editor/core 0.4.0, @proseline-editor/react 0.4.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / Electron / Node, and operating system
+      placeholder: "Chrome 150 on macOS 26, Ukrainian keyboard layout"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else (console output, screenshots)

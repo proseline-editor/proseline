@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm api:check
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm size
+      - run: pnpm --filter react-basic exec playwright install --with-deps chromium firefox webkit
+      # A virtual display for the Electron example (harmless for the browser suites).
+      - run: xvfb-run -a pnpm e2e
+        env:
+          # Shared CI runners are slower than a dev machine; the spec budget is 1000 ms / 16 ms.
+          PL_PERF_READY_MS: '2000'
+          PL_PERF_KEY_MS: '16'
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: examples/*/test-results
+
+  node20:
+    # The packages support Node ≥ 20 on servers (export, import, sync/server); check the oldest one.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm --filter node-export start

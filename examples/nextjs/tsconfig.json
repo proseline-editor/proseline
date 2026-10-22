@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "composite": false,
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "allowJs": false,
+    "incremental": true,
+    "types": ["node"],
+    "plugins": [{ "name": "next" }]
+  },
+  "include": ["next-env.d.ts", "app", "lib", "e2e", "playwright.config.ts", ".next/types/**/*.ts"]
+}

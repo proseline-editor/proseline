@@ -1,0 +1,19 @@
+name: Feature request
+description: Propose a feature or an API change.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would it solve?
+      description: Describe the writing workflow or integration need, not only the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution or API
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered

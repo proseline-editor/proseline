@@ -1,0 +1,58 @@
+{
+  "name": "@proseline-editor/vue",
+  "version": "0.0.0",
+  "description": "Vue 3 components for the Proseline prose editor",
+  "license": "MIT",
+  "author": "Proseline contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proseline-editor/proseline.git",
+    "directory": "packages/vue"
+  },
+  "homepage": "https://github.com/proseline-editor/proseline#readme",
+  "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "keywords": [
+    "editor",
+    "prose",
+    "writing",
+    "vue",
+    "tiptap",
+    "prosemirror"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./theme.css": "./dist/theme.css"
+  },
+  "scripts": {
+    "build": "tsc -b && cp ../react/src/theme.css dist/theme.css",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@proseline-editor/core": "workspace:^"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/vue": "^8.1.0",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@vue/compiler-sfc": "^3.5.44",
+    "vue": "^3.5.44"
+  }
+}

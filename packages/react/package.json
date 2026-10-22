@@ -1,0 +1,63 @@
+{
+  "name": "@proseline-editor/react",
+  "version": "0.0.0",
+  "description": "React components for the Proseline prose editor",
+  "license": "MIT",
+  "author": "Proseline contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proseline-editor/proseline.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/proseline-editor/proseline#readme",
+  "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "keywords": [
+    "editor",
+    "prose",
+    "writing",
+    "react",
+    "tiptap",
+    "prosemirror"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./theme.css": "./dist/theme.css"
+  },
+  "scripts": {
+    "build": "tsc -b && cp src/theme.css dist/theme.css",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@proseline-editor/core": "workspace:^"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/react": "^3.32.0",
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/react": "^3.32.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

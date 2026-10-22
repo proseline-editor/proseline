@@ -1,0 +1,16 @@
+node_modules
+dist
+*.tsbuildinfo
+coverage
+test-results
+playwright-report
+.DS_Store
+.next
+next-env.d.ts
+site/reference
+site/public/playground
+site/.vitepress/dist
+site/.vitepress/cache
+# Design notes and implementation plans are kept locally, outside the public repository.
+docs/specs/
+docs/plans/

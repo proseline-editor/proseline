@@ -1,0 +1,30 @@
+{
+  "name": "electron-example",
+  "private": true,
+  "type": "module",
+  "main": "main.mjs",
+  "scripts": {
+    "build": "vite build",
+    "start": "vite build && electron .",
+    "e2e": "vite build && playwright test"
+  },
+  "dependencies": {
+    "@proseline-editor/core": "workspace:^",
+    "@proseline-editor/export": "workspace:^",
+    "@proseline-editor/react": "workspace:^",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/html": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/react": "^3.32.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "electron": "^44.9.2",
+    "vite": "^8.3.4"
+  }
+}

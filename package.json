@@ -1,0 +1,37 @@
+{
+  "name": "proseline",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.19.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "pnpm --filter \"./packages/*\" build",
+    "typecheck": "tsc -b packages/core packages/react packages/vue packages/sync packages/sync-indexeddb packages/sync-hocuspocus packages/lexicons packages/export && tsc -p packages/core/tsconfig.test.json && tsc -p packages/react/tsconfig.test.json && tsc -p packages/vue/tsconfig.test.json && tsc -p packages/sync/tsconfig.test.json && tsc -p packages/sync-indexeddb/tsconfig.test.json && tsc -p packages/sync-hocuspocus/tsconfig.test.json && tsc -p packages/lexicons/tsconfig.test.json && tsc -p packages/export/tsconfig.test.json && tsc -p examples/shared && tsc -p examples/react-basic && tsc -p examples/vue-basic && tsc -p examples/react-collab && tsc -p examples/custom-transport && tsc -p examples/electron && tsc -p site",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "size": "size-limit",
+    "api:update": "node scripts/api-report.mjs",
+    "api:check": "node scripts/api-report.mjs --check",
+    "api:docs": "node scripts/api-report.mjs --docs site/reference",
+    "docs:build": "pnpm build && pnpm api:docs && pnpm --filter react-basic build && pnpm --filter vue-basic build && pnpm --filter docs-site build",
+    "docs:dev": "pnpm build && pnpm api:docs && pnpm --filter react-basic build && pnpm --filter vue-basic build && pnpm --filter docs-site dev",
+    "e2e": "pnpm --filter react-basic e2e && pnpm --filter vue-basic e2e && pnpm --filter react-collab e2e && pnpm --filter custom-transport e2e && pnpm --filter nextjs e2e && pnpm --filter electron-example e2e",
+    "changeset": "changeset",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "@eslint/js": "^10.0.1",
+    "@size-limit/preset-small-lib": "^14.2.0",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "happy-dom": "^21.0.3",
+    "size-limit": "^14.2.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.5"
+  }
+}

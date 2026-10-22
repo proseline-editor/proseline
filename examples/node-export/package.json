@@ -1,0 +1,17 @@
+{
+  "name": "node-export",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "@proseline-editor/export": "workspace:^",
+    "@proseline-editor/sync": "workspace:^",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/html": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "happy-dom": "^21.0.3",
+    "yjs": "^13.6.33"
+  }
+}

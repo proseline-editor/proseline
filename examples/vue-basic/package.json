@@ -1,0 +1,26 @@
+{
+  "name": "vue-basic",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 4177",
+    "build": "vite build",
+    "preview": "vite preview --port 4177 --strictPort",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@proseline-editor/core": "workspace:^",
+    "@proseline-editor/export": "workspace:^",
+    "@proseline-editor/lexicons": "workspace:^",
+    "@proseline-editor/vue": "workspace:^",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "example-shared": "workspace:*",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.20.5",
+    "vite": "^8.3.4"
+  }
+}

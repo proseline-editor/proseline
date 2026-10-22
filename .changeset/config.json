@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@4.0.1/schema.json",
+  "baseBranch": "main",
+  "access": "public",
+  "ignore": ["react-basic", "react-collab", "vue-basic", "example-shared", "node-export", "custom-transport", "nextjs", "electron-example", "docs-site"],
+  "fixed": [["@proseline-editor/*"]],
+  "linked": [],
+  "format": "auto",
+  "updateInternalDependencies": "patch",
+  "commit": false,
+  "changelog": "@changesets/cli/changelog"
+}

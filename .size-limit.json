@@ -1,0 +1,192 @@
+[
+  {
+    "name": "core",
+    "path": "packages/core/dist/index.js",
+    "import": "{ createEditor }",
+    "ignore": [
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/starter-kit",
+      "@tiptap/extensions",
+      "@tiptap/extension-paragraph",
+      "@tiptap/extension-text-align"
+    ],
+    "limit": "4 kB"
+  },
+  {
+    "name": "all writing-basics features",
+    "path": "packages/core/dist/features/index.js",
+    "import": "{ typography, paragraphStyles, findReplace, stats, focus }",
+    "ignore": [
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/starter-kit",
+      "@tiptap/extensions",
+      "@tiptap/extension-paragraph",
+      "@tiptap/extension-text-align"
+    ],
+    "limit": "6 kB"
+  },
+  {
+    "name": "comments feature",
+    "path": "packages/core/dist/features/index.js",
+    "import": "{ comments }",
+    "ignore": [
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/starter-kit",
+      "@tiptap/extensions",
+      "@tiptap/extension-paragraph",
+      "@tiptap/extension-text-align"
+    ],
+    "limit": "4 kB"
+  },
+  {
+    "name": "versions feature",
+    "path": "packages/core/dist/features/index.js",
+    "import": "{ versions }",
+    "ignore": [
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/starter-kit",
+      "@tiptap/extensions",
+      "@tiptap/extension-paragraph",
+      "@tiptap/extension-text-align"
+    ],
+    "limit": "4 kB"
+  },
+  {
+    "name": "mentions feature",
+    "path": "packages/core/dist/features/index.js",
+    "import": "{ mentions, staticMentionProvider }",
+    "ignore": [
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/starter-kit",
+      "@tiptap/extensions",
+      "@tiptap/extension-paragraph",
+      "@tiptap/extension-text-align"
+    ],
+    "limit": "4 kB"
+  },
+  {
+    "name": "style-analysis feature",
+    "path": "packages/core/dist/features/index.js",
+    "import": "{ styleAnalysis }",
+    "ignore": [
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/starter-kit",
+      "@tiptap/extensions",
+      "@tiptap/extension-paragraph",
+      "@tiptap/extension-text-align"
+    ],
+    "limit": "5 kB"
+  },
+  {
+    "name": "react (all components)",
+    "path": "packages/react/dist/index.js",
+    "ignore": [
+      "@proseline-editor/core",
+      "@proseline-editor/core/features",
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/react",
+      "react",
+      "react-dom",
+      "react/jsx-runtime"
+    ],
+    "limit": "7 kB"
+  },
+  {
+    "name": "vue (all components)",
+    "path": "packages/vue/dist/index.js",
+    "ignore": [
+      "@proseline-editor/core",
+      "@proseline-editor/core/features",
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/pm/model",
+      "vue"
+    ],
+    "limit": "8 kB"
+  },
+  {
+    "name": "sync (provider + collaboration + locks)",
+    "path": "packages/sync/dist/index.js",
+    "import": "{ createSyncProvider, collaboration }",
+    "ignore": [
+      "@proseline-editor/core",
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/extension-collaboration",
+      "@tiptap/extension-collaboration-caret",
+      "@tiptap/y-tiptap",
+      "yjs",
+      "y-protocols",
+      "y-protocols/awareness"
+    ],
+    "limit": "7 kB"
+  },
+  {
+    "name": "sync-indexeddb",
+    "path": "packages/sync-indexeddb/dist/index.js",
+    "ignore": [
+      "@proseline-editor/sync"
+    ],
+    "limit": "1 kB"
+  },
+  {
+    "name": "sync-hocuspocus",
+    "path": "packages/sync-hocuspocus/dist/index.js",
+    "ignore": [
+      "@proseline-editor/core",
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/extension-collaboration",
+      "@tiptap/extension-collaboration-caret",
+      "@tiptap/y-tiptap",
+      "yjs",
+      "y-protocols",
+      "y-protocols/awareness",
+      "@proseline-editor/sync",
+      "@hocuspocus/provider"
+    ],
+    "limit": "1.5 kB"
+  },
+  {
+    "name": "lexicons (largest language, en)",
+    "path": "packages/lexicons/dist/en.js",
+    "limit": "2 kB"
+  },
+  {
+    "name": "export (without docx)",
+    "path": "packages/export/dist/index.js",
+    "import": "{ exportManuscript }",
+    "ignore": [
+      "@proseline-editor/core",
+      "@proseline-editor/core/features",
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/html",
+      "docx"
+    ],
+    "limit": "6 kB"
+  },
+  {
+    "name": "import (without mammoth and marked)",
+    "path": "packages/export/dist/index.js",
+    "import": "{ importManuscript, joinDocuments }",
+    "ignore": [
+      "@proseline-editor/core",
+      "@proseline-editor/core/features",
+      "@tiptap/core",
+      "@tiptap/pm",
+      "@tiptap/html",
+      "docx",
+      "mammoth",
+      "marked"
+    ],
+    "limit": "2 kB"
+  }
+]

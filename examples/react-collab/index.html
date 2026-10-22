@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proseline — collaboration example</title>
+    <style>
+      html, body, #root { height: 100%; margin: 0; }
+      #root > .pl-root { height: 100%; }
+      .sidebar { display: flex; flex-direction: column; min-height: 0; border-left: 1px solid var(--pl-border); }
+      .sidebar > aside { flex: 1; border-left: 0; }
+      .sidebar-tabs { padding: 0.5rem 0.75rem 0; }
+      .sidebar-tabs [aria-selected='true'] { border-color: var(--pl-accent); color: var(--pl-accent); }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

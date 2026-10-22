@@ -1,0 +1,53 @@
+{
+  "name": "@proseline-editor/lexicons",
+  "version": "0.0.0",
+  "description": "English, Ukrainian and French word lists for the Proseline style analysis",
+  "license": "MIT",
+  "author": "Proseline contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proseline-editor/proseline.git",
+    "directory": "packages/lexicons"
+  },
+  "homepage": "https://github.com/proseline-editor/proseline#readme",
+  "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "keywords": [
+    "editor",
+    "style",
+    "writing",
+    "lexicon",
+    "readability"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./en": {
+      "types": "./dist/en.d.ts",
+      "default": "./dist/en.js"
+    },
+    "./uk": {
+      "types": "./dist/uk.d.ts",
+      "default": "./dist/uk.js"
+    },
+    "./fr": {
+      "types": "./dist/fr.d.ts",
+      "default": "./dist/fr.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@proseline-editor/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@proseline-editor/core": "workspace:^"
+  }
+}

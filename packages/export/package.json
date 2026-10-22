@@ -1,0 +1,68 @@
+{
+  "name": "@proseline-editor/export",
+  "version": "0.0.0",
+  "description": "Export Proseline manuscripts to DOCX, Markdown and HTML, and import them back",
+  "license": "MIT",
+  "author": "Proseline contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proseline-editor/proseline.git",
+    "directory": "packages/export"
+  },
+  "homepage": "https://github.com/proseline-editor/proseline#readme",
+  "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "keywords": [
+    "editor",
+    "docx",
+    "markdown",
+    "html",
+    "manuscript",
+    "export",
+    "import"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@proseline-editor/core": "workspace:^",
+    "docx": "^9.13.0",
+    "mammoth": "^1.13.0",
+    "marked": "^18.1.1"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/html": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "happy-dom": ">=20.8.9"
+  },
+  "peerDependenciesMeta": {
+    "@tiptap/html": {
+      "optional": true
+    },
+    "happy-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/html": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "happy-dom": "^21.0.3",
+    "jszip": "^3.10.1"
+  }
+}

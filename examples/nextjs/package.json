@@ -1,0 +1,30 @@
+{
+  "name": "nextjs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 4182",
+    "build": "next build",
+    "start": "next start --port 4182",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@proseline-editor/core": "workspace:^",
+    "@proseline-editor/export": "workspace:^",
+    "@proseline-editor/react": "workspace:^",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/html": "^3.32.0",
+    "@tiptap/pm": "^3.32.0",
+    "@tiptap/react": "^3.32.0",
+    "happy-dom": "^21.0.3",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0"
+  }
+}

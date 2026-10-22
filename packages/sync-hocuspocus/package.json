@@ -1,0 +1,51 @@
+{
+  "name": "@proseline-editor/sync-hocuspocus",
+  "version": "0.0.0",
+  "description": "Hocuspocus (y-websocket protocol) provider for the Proseline prose editor",
+  "license": "MIT",
+  "author": "Proseline contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proseline-editor/proseline.git",
+    "directory": "packages/sync-hocuspocus"
+  },
+  "homepage": "https://github.com/proseline-editor/proseline#readme",
+  "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "keywords": [
+    "editor",
+    "yjs",
+    "hocuspocus",
+    "collaboration"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hocuspocus/provider": "^4.7.1",
+    "@proseline-editor/core": "workspace:^",
+    "@proseline-editor/sync": "workspace:^",
+    "y-protocols": "^1.0.7"
+  },
+  "peerDependencies": {
+    "yjs": "^13.6.0"
+  },
+  "devDependencies": {
+    "@hocuspocus/server": "^4.7.1",
+    "yjs": "^13.6.33"
+  }
+}

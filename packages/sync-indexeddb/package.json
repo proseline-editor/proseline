@@ -1,0 +1,45 @@
+{
+  "name": "@proseline-editor/sync-indexeddb",
+  "version": "0.0.0",
+  "description": "IndexedDB persistence for @proseline-editor/sync: offline open and crash-safe unsent edits",
+  "license": "MIT",
+  "author": "Proseline contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proseline-editor/proseline.git",
+    "directory": "packages/sync-indexeddb"
+  },
+  "homepage": "https://github.com/proseline-editor/proseline#readme",
+  "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "keywords": [
+    "editor",
+    "yjs",
+    "indexeddb",
+    "offline"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@proseline-editor/sync": "workspace:^"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^6.2.6",
+    "yjs": "^13.6.33"
+  }
+}

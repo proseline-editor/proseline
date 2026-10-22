@@ -1,0 +1,63 @@
+{
+  "name": "@proseline-editor/core",
+  "version": "0.0.0",
+  "description": "Headless long-form prose editor built on TipTap 3",
+  "license": "MIT",
+  "author": "Proseline contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proseline-editor/proseline.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/proseline-editor/proseline#readme",
+  "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "keywords": [
+    "editor",
+    "prose",
+    "writing",
+    "manuscript",
+    "tiptap",
+    "prosemirror",
+    "headless"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./features": {
+      "types": "./dist/features/index.d.ts",
+      "default": "./dist/features/index.js"
+    },
+    "./features/*": {
+      "types": "./dist/features/*/index.d.ts",
+      "default": "./dist/features/*/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/pm": "^3.32.0"
+  },
+  "dependencies": {
+    "@tiptap/extension-paragraph": "^3.32.0",
+    "@tiptap/extension-text-align": "^3.32.0",
+    "@tiptap/extensions": "^3.32.0",
+    "@tiptap/starter-kit": "^3.32.0"
+  },
+  "devDependencies": {
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/pm": "^3.32.0"
+  }
+}
