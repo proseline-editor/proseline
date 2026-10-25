@@ -1,5 +1,11 @@
 # @proseline-editor/core
 
+## 0.1.1
+
+### Patch Changes
+
+- 0137738: Link the project's Patreon page: `npm fund` now shows where to support Proseline.
+
 ## 0.1.0
 
 ### Minor Changes

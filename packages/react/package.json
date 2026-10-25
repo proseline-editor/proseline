@@ -1,6 +1,6 @@
 {
   "name": "@proseline-editor/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React components for the Proseline prose editor",
   "license": "MIT",
   "author": "Proseline contributors",

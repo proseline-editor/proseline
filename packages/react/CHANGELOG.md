@@ -1,5 +1,12 @@
 # @proseline-editor/react
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated dependencies [0137738]
+  - @proseline-editor/core@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes
