@@ -44,7 +44,10 @@ export default defineConfig({
       '/reference/': [{ text: 'API reference', items: reference }],
     },
     search: { provider: 'local' },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/proseline-editor/proseline' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/proseline-editor/proseline' },
+      { icon: 'patreon', link: 'https://www.patreon.com/AndriiSlavnov', ariaLabel: 'Support Proseline on Patreon' },
+    ],
     footer: { message: 'MIT licensed.' },
   },
 });

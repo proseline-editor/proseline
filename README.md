@@ -205,6 +205,12 @@ Anything else is internal.
 | [`electron`](examples/electron) | A desktop app: native File menu, open and save through IPC from a sandboxed renderer |
 | [`node-export`](examples/node-export) | Export and import on a server, without a browser |
 
+## Sponsor Proseline
+
+Proseline is free and MIT-licensed, built and maintained by one person. If it saves you time or your writers love it,
+you can support its development on [Patreon](https://www.patreon.com/AndriiSlavnov). Backers and sponsors are
+credited here and on the documentation site.
+
 ## Development
 
 Requires Node 22.12+ and pnpm 10.

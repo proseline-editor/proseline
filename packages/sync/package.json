@@ -11,6 +11,10 @@
   },
   "homepage": "https://github.com/proseline-editor/proseline#readme",
   "bugs": "https://github.com/proseline-editor/proseline/issues",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/AndriiSlavnov"
+  },
   "keywords": [
     "editor",
     "collaboration",
