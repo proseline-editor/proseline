@@ -205,6 +205,12 @@ Anything else is internal.
 | [`electron`](examples/electron) | A desktop app: native File menu, open and save through IPC from a sandboxed renderer |
 | [`node-export`](examples/node-export) | Export and import on a server, without a browser |
 
+## Feedback
+
+Ideas, feedback and stories of what you're building with Proseline are welcome at
+[safilad@gmail.com](mailto:safilad@gmail.com). Bugs and feature requests are best filed as
+[GitHub issues](https://github.com/proseline-editor/proseline/issues), so others can follow them.
+
 ## Sponsor Proseline
 
 Proseline is free and MIT-licensed, built and maintained by one person. If it saves you time or your writers love it,

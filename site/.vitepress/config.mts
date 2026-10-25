@@ -48,6 +48,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/proseline-editor/proseline' },
       { icon: 'patreon', link: 'https://www.patreon.com/AndriiSlavnov', ariaLabel: 'Support Proseline on Patreon' },
     ],
-    footer: { message: 'MIT licensed.' },
+    footer: {
+      message: 'MIT licensed. Feedback and ideas: <a href="mailto:safilad@gmail.com">safilad@gmail.com</a>',
+    },
   },
 });
