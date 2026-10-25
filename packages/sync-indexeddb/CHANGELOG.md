@@ -1,5 +1,11 @@
 # @proseline-editor/sync-indexeddb
 
+## 0.1.1
+
+### Patch Changes
+
+- @proseline-editor/sync@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes

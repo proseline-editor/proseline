@@ -1,6 +1,6 @@
 {
   "name": "@proseline-editor/export",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Export Proseline manuscripts to DOCX, Markdown and HTML, and import them back",
   "license": "MIT",
   "author": "Proseline contributors",
