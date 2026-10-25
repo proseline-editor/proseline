@@ -11,6 +11,9 @@ hero:
     - theme: alt
       text: Try the playground
       link: /playground
+    - theme: alt
+      text: Sponsor on Patreon
+      link: https://www.patreon.com/AndriiSlavnov
 features:
   - title: Made for writers
     details: Smart typography for English, Ukrainian and French, paragraph styles, focus and typewriter modes, word goals, find and replace, style analysis.
